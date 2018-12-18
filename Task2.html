@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+   <script>
+			function Count() {
+				var x = document.getElementById('x').value;
+				var s = 0;
+				for (i = 3; i < 16; i++){  
+					s = s + ((Math.pow(x, (4 * (i-1) + 1)))/((i-1) * 4)); 
+				}
+				console.log(s);
+				document.getElementById("result").innerHTML = (s);
+			}				
+   </script>
+</head>
+<body>
+	
+	<form>
+		 Введите x:<input id="x" type="number" value="2"><br>
+		 Сумма: <output id="result">0</output>
+	</form>
+	<button onClick="Count()">Посчитать</button>
+</body>
+</html>
